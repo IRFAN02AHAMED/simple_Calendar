@@ -1,0 +1,69 @@
+.event-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.form-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.event-form input,
+.custom-datepicker,
+.event-form button {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.custom-datepicker {
+  min-width: 160px;
+  max-width: 180px;
+  background: #f9fafb;
+  color: #111827;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+.event-form button {
+  background: #b374ef; 
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+}
+
+.event-form button:hover {
+  background: #9b58d3; 
+}
+
+
+.react-datepicker {
+  font-family: "Segoe UI", sans-serif;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.react-datepicker__header {
+  background-color: #e0c8f7;
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+  background-color:#b374ef;
+  color: white !important;
+  border-radius: 50%;
+}
+
+.react-datepicker__day:hover {
+  background-color: #c7d2fe;
+  border-radius: 50%;
+}

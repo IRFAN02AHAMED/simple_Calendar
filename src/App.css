@@ -1,0 +1,154 @@
+body, html, #root {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e0c8f7;
+  color: #333;
+}
+
+.app {
+  max-width: 900px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0.5rem 0 1rem;
+  font-weight: bold;
+  color: #080808;
+  font-family: 'Georgia', serif;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.nav-buttons button {
+  background: #b374ef;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.4rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.nav-buttons button:hover {
+  background: #9b58d3;
+}
+
+.event-form {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.event-form input,
+.event-form button {
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+}
+
+.event-form button {
+  background: #16a34a;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.event-form button:hover {
+  background: #15803d;
+}
+
+.calendar-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+  padding: 0.5rem;
+}
+
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-weight: bold;
+  text-align: center;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.weekday {
+  padding: 6px 0;
+  background-color: #f4f4f8;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  flex-grow: 1;
+}
+
+.cell {
+  background: #fff;
+  min-height: 70px;
+  padding: 4px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 0.8rem;
+}
+
+.cell.today {
+  background-color: #fbe4ff;
+  border: 2px solid #c084fc;
+}
+
+.date-number {
+  font-weight: bold;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.event {
+  background-color: #e0c8f7;
+  color: #b374ef;
+  padding: 2px 4px;
+  font-size: 10px;
+  margin-top: 2px;
+  border-radius: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-height: 750px) {
+  .cell {
+    min-height: 60px;
+  }
+  .event-form input,
+  .event-form button {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.5rem;
+  }
+}
